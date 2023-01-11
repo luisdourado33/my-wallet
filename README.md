@@ -22,3 +22,4 @@
  - [ ] Develop landing page, based on Figma's example;
  - [ ] Develop login page, based on Figma's example;
  - [ ] Develop dashboard page, based on Figma's example;
+ - [ ] Develop a 404 not found page, based on Figma's example;
