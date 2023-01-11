@@ -1,5 +1,4 @@
 ##  My Wallet
----
 
 Manage your finances anywhere
 
