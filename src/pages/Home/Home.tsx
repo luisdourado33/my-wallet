@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react';
 
-import { useAppSelector } from 'hooks/context';
-import { selectAuthentication } from 'context/public/authenticationSlice';
+import { useAppDispatch, useAppSelector } from 'hooks/context';
+import { makeAuthentication, makeLogoff, selectAuthentication } from 'context/public/authenticationSlice';
 
 const Home: React.FC<any> = ({
   children
 }) => {
   const authenticationState = useAppSelector(selectAuthentication);
+  const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    document.title += ' | Homepage';
-    console.log(authenticationState);
-  }, [authenticationState]);
+  const handleMakeLogin = (): any => dispatch(makeAuthentication());
+  const handleMakeLogoff = (): any => dispatch(makeLogoff());
 
   return (
     <div>
-      {authenticationState.isAuthenticated ? 'OK' : 'NOT OK'}
+      {authenticationState.isAuthenticated ? 'LOGGED' : 'NOT LOGGED'}
+      <button onClick={handleMakeLogin}>Login</button>
+      <button onClick={handleMakeLogoff}>Logout</button>
     </div>
   );
 };
