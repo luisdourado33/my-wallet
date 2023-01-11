@@ -1,15 +1,13 @@
 import {
   createBrowserRouter,
-  RouteObject
+  createRoutesFromElements,
+  Route
 } from 'react-router-dom';
 
 import Home from 'pages/Home';
 
-const mappedRoutes: RouteObject[] = [
-  {
-    path: '/',
-    element: <Home>Homepage</Home>,
-  }
-];
+export const mappedRoutes = createRoutesFromElements(
+  <Route path='/' element={<Home>Homepage</Home>}  />
+);
 
 export const publicRouter = createBrowserRouter(mappedRoutes);
