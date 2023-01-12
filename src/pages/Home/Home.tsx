@@ -14,9 +14,7 @@ const Home: React.FC<any> = ({
 
   return (
     <div>
-      {authenticationState.isAuthenticated ? 'LOGGED' : 'NOT LOGGED'}
-      <button onClick={handleMakeLogin}>Login</button>
-      <button onClick={handleMakeLogoff}>Logout</button>
+      <h1>Homepage</h1>
     </div>
   );
 };
