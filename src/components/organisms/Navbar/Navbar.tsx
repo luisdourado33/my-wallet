@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { Nav } from './styles.modules';
-import { Button, Flex, HStack } from '@chakra-ui/react';
+import { Header, FlexContainer } from './styles.modules';
+import { Button, HStack, Text } from '@chakra-ui/react';
+
+import NavItem from 'components/atoms/NavItem';
 
 const menuItems = [
   { label: 'Home', variant: 'nav' },
@@ -16,29 +18,37 @@ const callToActions = [
 
 const Navbar = () => {
   const renderMenuItems = menuItems.map((item, index) => (
-    <Button variant={item.variant} key={index}>{item.label}</Button>
+    <NavItem variant={item.variant} key={index}>{item.label}</NavItem>
   ));
   
   const renderCallToActions = callToActions.map((item, index) => (
-    <Button colorScheme={'teal'} variant={item.variant ?? 'solid'} key={index}>{item.label}</Button>
+    <Button color='teal' variant={item.variant ?? 'solid'} key={index}>{item.label}</Button>
   ))
 
   return (
-    <Nav>
-      <Flex w="100%"
-        px="6"
-        py="5"
-        align="center"
-        justify="space-between">
-          <h1>Logo</h1>
-          <HStack as='nav' spacing='5'>
-            {renderMenuItems}
-          </HStack>
-          <HStack as='nav' spacing='5'>
-            {renderCallToActions}
-          </HStack>
-      </Flex>
-    </Nav>
+    <Header>
+      <FlexContainer 
+        justifyContent='space-evenly'
+        alignItems='center'
+        p='2'
+      >
+        <Text
+          as='span'
+          fontWeight='extrabold'
+          letterSpacing='widest'
+        >
+          My Wallet
+        </Text>
+        <HStack as='nav' alignItems='center'>
+          {renderMenuItems}
+        </HStack>
+        <HStack
+          as='nav'
+        >
+          {renderCallToActions}
+        </HStack>
+      </FlexContainer>
+    </Header>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { chakra } from '@chakra-ui/react';
+import { chakra, Flex } from '@chakra-ui/react';
 
-export const Nav = styled(chakra.header)`
-  width: 100%;
-`;
+export const Header = styled(chakra.header)``;
+
+export const FlexContainer = styled(Flex)``;
