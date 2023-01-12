@@ -18,11 +18,11 @@ const callToActions = [
 
 const Navbar = () => {
   const renderMenuItems = menuItems.map((item, index) => (
-    <NavItem variant={item.variant} key={index}>{item.label}</NavItem>
+    <NavItem variant={item.variant} key={index} fontSize='sm'>{item.label}</NavItem>
   ));
   
   const renderCallToActions = callToActions.map((item, index) => (
-    <Button color='teal' variant={item.variant ?? 'solid'} key={index}>{item.label}</Button>
+    <Button color='teal' variant={item.variant ?? 'solid'} key={index} fontSize='sm'>{item.label}</Button>
   ))
 
   return (
