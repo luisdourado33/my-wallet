@@ -1,21 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import { useAppDispatch, useAppSelector } from 'hooks/context';
-import { makeAuthentication, makeLogoff, selectAuthentication } from 'context/public/authenticationSlice';
+import { Container } from './home.styles';
 
 const Home: React.FC<any> = ({
   children
 }) => {
-  const authenticationState = useAppSelector(selectAuthentication);
-  const dispatch = useAppDispatch();
-
-  const handleMakeLogin = (): any => dispatch(makeAuthentication());
-  const handleMakeLogoff = (): any => dispatch(makeLogoff());
 
   return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+    <Container>
+      <h1>Hello World!</h1>
+    </Container>
   );
 };
 
