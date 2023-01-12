@@ -7,7 +7,7 @@ import {
 import Home from 'pages/Home';
 
 export const mappedRoutes = createRoutesFromElements(
-  <Route path='/' element={<Home>Homepage</Home>}  />
+  <Route path='/' element={<Home />}  />
 );
 
 export const publicRouter = createBrowserRouter(mappedRoutes);

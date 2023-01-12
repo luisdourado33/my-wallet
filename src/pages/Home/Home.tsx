@@ -2,13 +2,15 @@ import React from 'react';
 
 import { Container } from './home.styles';
 
+import Navbar from 'components/organisms/Navbar';
+
 const Home: React.FC<any> = ({
   children
 }) => {
 
   return (
     <Container>
-      <h1>Hello World!</h1>
+      <Navbar />
     </Container>
   );
 };

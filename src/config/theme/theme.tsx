@@ -1,5 +1,9 @@
 import React from 'react';
+
+import '@fontsource/inter';
+
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 const theme = {
   colors: {
@@ -16,10 +20,19 @@ const theme = {
   }
 };
 
+const chakraTheme = extendTheme({
+  fonts: {
+    heading: `'Inter', sans-serif`,
+    body: `'Inter', sans-serif`
+  }
+});
+
 export const ThemeProvider: React.FC<any> = ({ children }) => {
   return (
     <StyledComponentsThemeProvider theme={theme}>
-      {children}
+      <ChakraProvider theme={chakraTheme}>
+        {children}
+      </ChakraProvider>
     </StyledComponentsThemeProvider>
   );
 };
