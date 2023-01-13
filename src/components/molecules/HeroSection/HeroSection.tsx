@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroProps> = ({ title, description }) => {
           <Title 
             fontSize='5xl'
             fontWeight='bold'
-            w='70%'
+            w='50%'
             lineHeight='0.8'
           >
             {title}
@@ -36,13 +36,23 @@ const HeroSection: React.FC<HeroProps> = ({ title, description }) => {
           </Description>
           <Button variant='solid' colorScheme='teal'>Get started</Button>
         </Box>
-        <Box boxSize='lg' alignItems='center' justifyContent='center' display='flex'>
-          <Image 
+        <Box
+          w='50%'
+          boxSize='lg'
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          bgColor='teal'
+        >
+          <span>
+            Image here
+          </span>
+          {/* <Image 
             src={PersonalFinanceSVG}
             alt='Personal finance'
             w='100%'
             h='70%'
-            style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }} />
+            style={{ borderRadius: '50% 50% 50% 50% / 50% 50% 50% 50%' }} /> */}
         </Box>
       </HStack>
     </Container>
