@@ -13,8 +13,10 @@ const Home: React.FC<any> = ({
     <Container>
       <Navbar />
       <HeroSection 
-        title='Just a title'
-        description='Lorem Ipsum sit amet dolor i don"t know what I should to write here'
+        title='Manage your wallet easily'
+        description="A complete dashboard with chart that will help you to get a new level of
+        finance's life
+        "
       />
     </Container>
   );

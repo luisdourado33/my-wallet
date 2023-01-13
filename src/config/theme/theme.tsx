@@ -6,7 +6,7 @@ import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-component
 import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react';
 
 export const theme: ThemeConfig | any = {
-  initialColorMode: 'system',
+  initialColorMode: 'dark',
   useSystemColorMode: true,
   colors: {
     solid: '#06283D',
@@ -19,6 +19,10 @@ export const theme: ThemeConfig | any = {
     small: '',
     medium: '',
     large: ''
+  },
+  spacing: {
+    inline: '100px',
+    block: '15px'
   }
 };
 

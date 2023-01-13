@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
-import { Container as ChakraContainer, Text } from '@chakra-ui/react';
+import { Container as ChakraContainer, Text, Flex } from '@chakra-ui/react';
 
-export const Container = styled.div`
-  // background: ${({theme}) => theme.colors.solid};
-  // color: #fff;
-  padding-inline: 199px;
-  align-items: center;
-  justify-content: center;
-  padding-block: 150px;
+export const Container = styled(Flex)`
+  padding-inline: ${({theme}) => theme.spacing.inline};
 `;
 
 export const Title = styled(Text)`
   margin-bottom: 5px;
+  transition: all 0.5s;
+  border: 3px solid transparent;
+
+  &:hover {
+    border-bottom: 3px solid ${({theme}) => theme.colors.solid};
+  }
 `;
 
 export const Description = styled(Text)`

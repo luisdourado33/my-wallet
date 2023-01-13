@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Header, FlexContainer } from './styles.modules';
-import { Button, HStack, Text } from '@chakra-ui/react';
+import { Button, HStack, Text, useColorMode } from '@chakra-ui/react';
 
 import NavItem from 'components/atoms/NavItem';
 
@@ -17,6 +17,8 @@ const callToActions = [
 ];
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  
   const renderMenuItems = menuItems.map((item, index) => (
     <NavItem variant={item.variant} key={index} fontSize='sm'>{item.label}</NavItem>
   ));
@@ -26,11 +28,11 @@ const Navbar = () => {
   ))
 
   return (
-    <Header>
+    <Header position='fixed'>
       <FlexContainer 
-        justifyContent='space-evenly'
         alignItems='center'
-        p='2'
+        justifyContent='space-between'
+        paddingBlock='3'
       >
         <Text
           as='span'
@@ -47,6 +49,9 @@ const Navbar = () => {
         >
           {renderCallToActions}
         </HStack>
+        <Button onClick={toggleColorMode}>
+          {colorMode == 'light' ? 'Light' : 'Dark'}
+        </Button>
       </FlexContainer>
     </Header>
   );
