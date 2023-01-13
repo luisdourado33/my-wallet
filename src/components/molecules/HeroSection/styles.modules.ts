@@ -4,6 +4,7 @@ import { Container as ChakraContainer, Text, Flex } from "@chakra-ui/react";
 
 export const Container = styled(Flex)`
   padding-inline: ${({ theme }) => theme.spacing.inline};
+  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
 `;
 
 export const Title = styled(Text)`
