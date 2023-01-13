@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Header, FlexContainer } from "./styles.modules";
 import { Button, HStack, Text, useColorMode } from "@chakra-ui/react";
@@ -19,10 +20,11 @@ interface PropsCTA {
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const navigate = useNavigate();
 
   const callToActions: Array<PropsCTA> = [
     { label: "For companies", variant: "nav" },
-    { label: "Sign-in", variant: "solid" },
+    { label: "Sign-in", variant: "solid", onClick: () => navigate('/login') },
     {
       label: colorMode == "dark" ? "🌚" : "🌞",
       variant: "outline",
