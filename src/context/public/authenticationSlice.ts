@@ -3,23 +3,23 @@ import { RootState } from "./publicStore";
 
 interface AuthenticationState {
   isAuthenticated: boolean;
-};
+}
 
 const initialState: AuthenticationState = {
-  isAuthenticated: false
+  isAuthenticated: false,
 };
 
 export const authenticationSlice = createSlice({
-  name: 'authentication',
+  name: "authentication",
   initialState,
   reducers: {
-    makeAuthentication: state => {
+    makeAuthentication: (state) => {
       state.isAuthenticated = true;
     },
-    makeLogoff: state => {
+    makeLogoff: (state) => {
       state.isAuthenticated = false;
-    }
-  }
+    },
+  },
 });
 
 export const { makeAuthentication, makeLogoff } = authenticationSlice.actions;
