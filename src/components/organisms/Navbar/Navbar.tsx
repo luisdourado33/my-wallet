@@ -11,24 +11,45 @@ const menuItems = [
   { label: 'Pricing', variant: 'nav' },
 ];
 
-const callToActions = [
-  { label: 'For companies', variant: 'nav' },
-  { label: 'Sign-in', variant: 'solid' }
-];
+interface PropsCTA {
+  label: string;
+  variant: 'solid' | 'outline' | 'ghost' | 'link' | 'nav';
+  onClick?: any;
+};
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  
+
+  const callToActions: Array<PropsCTA> = [
+    { label: 'For companies', variant: 'nav' },
+    { label: 'Sign-in', variant: 'solid' },
+    { label: colorMode == 'dark' ? '🌚' : '🌞', variant: 'outline', onClick: toggleColorMode }
+  ];
+
   const renderMenuItems = menuItems.map((item, index) => (
-    <NavItem variant={item.variant} key={index} fontSize='sm'>{item.label}</NavItem>
+    <NavItem 
+      variant={item.variant} 
+      key={index} 
+      fontSize='sm'
+    >
+      {item.label}
+    </NavItem>
   ));
   
   const renderCallToActions = callToActions.map((item, index) => (
-    <Button color='teal' variant={item.variant ?? 'solid'} key={index} fontSize='sm'>{item.label}</Button>
+    <Button 
+      key={index}
+      color='teal' 
+      variant={item.variant ?? 'solid'}
+      onClick={item.onClick ?? (() => {})} 
+      fontSize='sm'
+    >
+      {item.label}
+    </Button>
   ))
 
   return (
-    <Header position='fixed'>
+    <Header>
       <FlexContainer 
         alignItems='center'
         justifyContent='space-between'
@@ -49,9 +70,6 @@ const Navbar = () => {
         >
           {renderCallToActions}
         </HStack>
-        <Button onClick={toggleColorMode}>
-          {colorMode == 'light' ? 'Light' : 'Dark'}
-        </Button>
       </FlexContainer>
     </Header>
   );
