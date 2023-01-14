@@ -2,9 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Header, FlexContainer } from "./styles.modules";
-import { Button, HStack, Text, useColorMode } from "@chakra-ui/react";
+import { Button, HStack, useColorMode } from "@chakra-ui/react";
 
 import NavItem from "components/atoms/NavItem";
+import BrandText from "components/atoms/BrandText";
 
 const menuItems = [
   { label: "Home", variant: "nav" },
@@ -57,9 +58,7 @@ const Navbar = () => {
         justifyContent="space-between"
         paddingBlock="3"
       >
-        <Text as="span" fontWeight="extrabold" letterSpacing="widest">
-          My Wallet
-        </Text>
+        <BrandText />
         <HStack as="nav" alignItems="center">
           {renderMenuItems}
         </HStack>
