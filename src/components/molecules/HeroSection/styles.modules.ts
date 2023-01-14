@@ -5,7 +5,7 @@ import { fadeIn } from "utils/animations/keyframes";
 
 export const Container = styled(Flex)`
   padding-inline: ${({ theme }) => theme.spacing.inline};
-  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
 `;
 
 export const Title = styled(Text)`
