@@ -4,13 +4,21 @@ import { Container, Description, Title } from "./styles.modules";
 import { Box, Button, HStack, Image } from "@chakra-ui/react";
 
 import PersonalFinanceSVG from "../../../assets/personal-finance.svg";
+import { useNavigate } from "react-router-dom";
 
 interface HeroProps {
   title: string;
   description: string;
+  cta?: {
+    label: string;
+    href: string;
+  }
 }
 
-const HeroSection: React.FC<HeroProps> = ({ title, description }) => {
+const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
+  const navigate = useNavigate();
+  const handleOnClickCTA = () => navigate(cta?.href ?? '/');
+
   return (
     <Container w="100%">
       <HStack w="100%" justifyContent="space-between">
@@ -21,8 +29,8 @@ const HeroSection: React.FC<HeroProps> = ({ title, description }) => {
           <Description fontSize="sm" mb="5">
             {description}
           </Description>
-          <Button variant="solid" colorScheme="teal">
-            Get started
+          <Button variant="solid" colorScheme="teal" onClick={handleOnClickCTA}>
+            {cta?.label ?? 'Button'}
           </Button>
         </Box>
         <Box

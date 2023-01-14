@@ -14,6 +14,10 @@ const Home: React.FC<any> = ({ children }) => {
         description="A complete dashboard with chart that will help you to get a new level of
         finance's life
         "
+        cta={{
+          label: 'Get Started',
+          href: '/login'
+        }}
       />
     </Container>
   );

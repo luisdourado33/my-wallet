@@ -16,7 +16,7 @@
   - [x] Make the first route system configuration;
   - [x] Set the project state management, something like *Redux*;
   - [x] Install CSS-in-JS, something like Styled Components, SASS, LESS, et cetera;
-  - [x] Define a project TrueType Font and set it globally. (Inter is the chosen)
+  - [x] Define a project TrueType Font and set it globally. (current is Inter)
 
 ### Frontend
 
