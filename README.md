@@ -20,7 +20,7 @@
 
 ### Frontend
 
- - [ ] Develop landing page, based on Figma's example;
- - [ ] Develop login page, based on Figma's example;
- - [ ] Develop dashboard page, based on Figma's example;
+ - [x] Develop landing page, based on Figma's example;
+ - [x] Develop login page, based on Figma's example;
+ - [ ] WIP - Develop dashboard page, based on Figma's example;
  - [ ] Develop a 404 not found page, based on Figma's example;
