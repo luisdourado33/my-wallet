@@ -6,8 +6,6 @@ import { useColorMode, Button, Text } from '@chakra-ui/react';
 import BrandText from 'components/atoms/BrandText';
 import LoginForm from 'components/organisms/LoginForm';
 
-import { fadeIn } from 'utils/animations/keyframes';
-
 const Login = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -33,9 +31,9 @@ const Login = () => {
           
         }}
       >
-        <Button onClick={toggleColorMode}>
+        {/* <Button onClick={toggleColorMode}>
           Toggle Color mode
-        </Button>
+        </Button> */}
       </ContentBox>
     </Container>
   );
