@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import { Button, Checkbox, FormControl, FormHelperText, FormLabel, Input, Text } from '@chakra-ui/react';
+import { Button, Checkbox, Flex, FormControl, FormHelperText, FormLabel, Input, Text } from '@chakra-ui/react';
 import { Form } from './styles.modules';
 
 import HighlightText from 'components/atoms/HighlightText/HighlightText';
@@ -44,11 +44,16 @@ const LoginForm = () => {
         <Checkbox size='sm'>Remember for 30 days</Checkbox>
         <Button variant='link' size='xs'>Forgot password</Button>
       </FormControl>
-      <FormControl w='100%'>
+      <FormControl mb='4'>
         <Button w='100%' colorScheme='green' type='submit'>
           Sign-in
         </Button>
       </FormControl>
+      <Flex>
+        <Button variant='link' size='sm'>
+          Don't have an account? Sign up
+        </Button>
+      </Flex>
     </Form>
   )
 };
