@@ -18,6 +18,7 @@ const Dashboard = () => {
         h='100%'
       >
         <Outlet />
+        <p>Lorem Ipsum sit amet dolor</p>
       </Content>
     </Container>
   );

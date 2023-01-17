@@ -2,13 +2,13 @@ import React from 'react';
 
 import BrandText from 'components/atoms/BrandText';
 
-import { Button, useColorMode } from '@chakra-ui/react';
+import { PhoneIcon, HamburgerIcon,  } from '@chakra-ui/icons';
+
+import { Button, useColorMode, VStack } from '@chakra-ui/react';
 import { Items, Sidebar } from './styles.modules';
 
 const ITEMS = [
-  { label: 'Expenses' },
-  { label: 'Billings' },
-  { label: 'Calendar' }
+  { label: 'Statistics', icon: <HamburgerIcon mr='2'/> }
 ];
 
 const DashboardSidebar = () => {
@@ -18,7 +18,10 @@ const DashboardSidebar = () => {
     <Button 
       w='100%'
       fontSize='sm'
-    >{item.label}</Button>
+    >
+      {item.icon}
+      {item.label}
+    </Button>
   ));
 
   return (
@@ -27,15 +30,15 @@ const DashboardSidebar = () => {
       paddingInline='3'
       justifyContent='space-between'
     >
-      <div>
-      <BrandText mb='8' />
-      <Items
-        w='100%'
-        paddingInline='0'
-      >
-        {renderItems}
-      </Items>
-      </div>
+      <VStack>
+        <BrandText mb='8' />
+        <Items
+          w='100%'
+          paddingInline='0'
+        >
+          {renderItems}
+        </Items>
+      </VStack>
       <Button 
         variant='link'
         fontSize='2xs'
