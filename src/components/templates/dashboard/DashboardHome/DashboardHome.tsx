@@ -1,9 +1,14 @@
 import React from 'react';
 
+import HeadingWithDescription from 'components/molecules/HeadingWithDescription';
+
 const DashboardHome = () => {
   return (
     <div>
-      <h1>Dashboard Home</h1>
+      <HeadingWithDescription 
+        title='Dashboard'
+        description='Welcome, John!'
+      />
     </div>
   );
 };
