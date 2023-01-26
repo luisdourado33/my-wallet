@@ -14,8 +14,9 @@ const ITEMS = [
 const DashboardSidebar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   
-  const renderItems = ITEMS.map(item => (
-    <Button 
+  const renderItems = ITEMS.map((item, index) => (
+    <Button
+      key={index} 
       w='100%'
       fontSize='sm'
     >
