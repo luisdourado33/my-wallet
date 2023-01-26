@@ -15,10 +15,10 @@ const Dashboard = () => {
       <Content 
         id='content'
         w='100%'
-        h='100%'
+        paddingBlock='15'
+        paddingInline='7'
       >
         <Outlet />
-        <p>Lorem Ipsum sit amet dolor</p>
       </Content>
     </Container>
   );

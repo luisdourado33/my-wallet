@@ -7,25 +7,25 @@ import {
 import Home from "pages/Home";
 import Login from "pages/Login";
 import Dashboard from "pages/Dashboard";
+import PrivateRoute from "navigation/PrivateRoute";
+import DashboardHome from "components/templates/dashboard/DashboardHome";
 
 const NotFound = () => {
   return <div><h1>Page not found</h1></div>
-}
-
-const PrivatePage = () => {
-  return (
-    <div style={{ backgroundColor: 'red' }}>
-      <h1>This is a private page inside of dashboard</h1>
-    </div>
-  );
 }
 
 export const mappedRoutes = createRoutesFromElements(
   <>
     <Route path="/" element={<Home />} />
     <Route path="login" element={<Login />} />
-    <Route path='dashboard' element={<Dashboard />}>
-      <Route path='' element={<PrivatePage />} />
+    <Route path='dashboard' element={
+      <PrivateRoute>
+        <Dashboard />
+      </PrivateRoute>
+    }>
+      <Route path='' element={
+          <DashboardHome />
+      } />
     </Route>
     <Route path='*' element={<NotFound />} />
   </>

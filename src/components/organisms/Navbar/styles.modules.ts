@@ -7,4 +7,5 @@ export const Header = styled(chakra.header)`
   width: 100%;
 `;
 
-export const FlexContainer = styled(Flex)``;
+export const FlexContainer = styled(Flex)`
+`;
