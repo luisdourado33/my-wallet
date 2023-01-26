@@ -6,7 +6,7 @@ import ValuesInfoCard from "components/molecules/ValuesInfoCard/ValuesInfoCard";
 
 const DashboardGridCard = () => {
   return (
-    <Container>
+    <Container marginBottom='4'>
       <ValuesInfoCard />
       <ValuesInfoCard />
       <ValuesInfoCard />

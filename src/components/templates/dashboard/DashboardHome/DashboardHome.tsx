@@ -9,6 +9,7 @@ import { AddIcon, SearchIcon } from '@chakra-ui/icons';
 import HeadingWithDescription from 'components/molecules/HeadingWithDescription';
 import DashboardEdgeNavbar from 'components/organisms/DashboardEdgeNavbar';
 import DashboardGridCard from 'components/organisms/DashboardGridCard/DashboardGridCard';
+import TestChart from 'components/organisms/TestChart';
 
 const DashboardHome = () => {
   const menuItems: EdgeNavbarType[] = [
@@ -34,6 +35,12 @@ const DashboardHome = () => {
       </Flex>
       <Content>
         <DashboardGridCard />
+        <HeadingWithDescription 
+          title='Expenses by category'
+          description='Lorem Ipsum'
+        />
+
+        <TestChart />
       </Content>
     </Container>
   );

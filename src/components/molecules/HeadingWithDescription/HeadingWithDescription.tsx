@@ -11,7 +11,7 @@ const HeadingWithDescription: React.FC<Props> = ({ title, description }) => {
   return (
     <div>
       <Heading 
-        fontSize='2xl'
+        fontSize='lg'
         fontWeight='extrabold'
       >{title}</Heading>
       <Text 
