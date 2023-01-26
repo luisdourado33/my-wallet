@@ -10,6 +10,12 @@ import { useLocation } from 'react-router-dom';
 
 const ITEMS = [
   { label: 'Dashboard', icon: <HamburgerIcon mr='2' /> },
+  { label: 'Transactions', icon: <HamburgerIcon mr='2' /> },
+  { label: 'Credit Cards', icon: <HamburgerIcon mr='2' /> },
+  { label: 'Planning', icon: <HamburgerIcon mr='2' /> },
+  { label: 'Accounts', icon: <HamburgerIcon mr='2' /> },
+  { label: 'Reports', icon: <HamburgerIcon mr='2' /> },
+  { label: 'More options', icon: <HamburgerIcon mr='2' /> },
   { label: 'Settings', icon: <EditIcon mr='2' /> },
 ];
 
@@ -30,9 +36,12 @@ const DashboardSidebar = () => {
 
   const renderItems = ITEMS.map((item, index) => (
     <Button
-      key={index}
       w='100%'
+      key={index}
       fontSize='sm'
+      colorScheme='teal'
+      justifyContent='start'
+      size='sm'
       variant={currentPageLabel() == item.label ? 'solid' : 'outline'}
     >
       {item.icon}

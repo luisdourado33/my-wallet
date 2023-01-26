@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { Flex } from '@chakra-ui/react';
-import { Container } from './styles.modules';
-
-import HeadingWithDescription from 'components/molecules/HeadingWithDescription';
-import DashboardEdgeNavbar from 'components/organisms/DashboardEdgeNavbar';
+import { Container, Content } from './styles.modules';
 
 import { EdgeNavbarType } from 'components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types';
 import { AddIcon, SearchIcon } from '@chakra-ui/icons';
+
+import HeadingWithDescription from 'components/molecules/HeadingWithDescription';
+import DashboardEdgeNavbar from 'components/organisms/DashboardEdgeNavbar';
+import DashboardGridCard from 'components/organisms/DashboardGridCard/DashboardGridCard';
 
 const DashboardHome = () => {
   const menuItems: EdgeNavbarType[] = [
@@ -16,7 +17,9 @@ const DashboardHome = () => {
   ];
 
   return (
-    <Container>
+    <Container
+      flexDirection='column'
+    >
       <Flex
         w='100%'
         justifyContent='space-between'
@@ -29,6 +32,9 @@ const DashboardHome = () => {
           items={menuItems}
         />
       </Flex>
+      <Content>
+        <DashboardGridCard />
+      </Content>
     </Container>
   );
 };
