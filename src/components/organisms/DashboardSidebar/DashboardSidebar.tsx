@@ -1,29 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import BrandText from 'components/atoms/BrandText';
 
-import { PhoneIcon, HamburgerIcon,  } from '@chakra-ui/icons';
+import { EditIcon, HamburgerIcon, } from '@chakra-ui/icons';
 
 import { Button, useColorMode, VStack } from '@chakra-ui/react';
 import { Items, Sidebar } from './styles.modules';
+import { useLocation } from 'react-router-dom';
 
 const ITEMS = [
-  { label: 'Statistics', icon: <HamburgerIcon mr='2'/> }
+  { label: 'Dashboard', icon: <HamburgerIcon mr='2' /> },
+  { label: 'Settings', icon: <EditIcon mr='2' /> },
 ];
 
 const DashboardSidebar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  
+  const location = useLocation();
+
+  const currentPageLabel = (): string => {
+    const currentLocation: string = location.pathname;
+
+    const locations: any = {
+      '/dashboard': 'Dashboard',
+      '/settings': 'Settings'
+    };
+
+    return locations[currentLocation];
+  };
+
   const renderItems = ITEMS.map((item, index) => (
     <Button
-      key={index} 
+      key={index}
       w='100%'
       fontSize='sm'
+      variant={currentPageLabel() == item.label ? 'solid' : 'outline'}
     >
       {item.icon}
       {item.label}
     </Button>
   ));
+
+  useEffect(() => {
+    console.log(location);
+  });
 
   return (
     <Sidebar
@@ -40,7 +59,7 @@ const DashboardSidebar = () => {
           {renderItems}
         </Items>
       </VStack>
-      <Button 
+      <Button
         variant='link'
         fontSize='2xs'
         onClick={toggleColorMode}>Switch theme</Button>
