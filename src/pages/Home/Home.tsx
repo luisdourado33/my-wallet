@@ -15,8 +15,8 @@ const Home: React.FC<any> = ({ children }) => {
         finance's life
         "
         cta={{
-          label: 'Get Started',
-          href: '/login'
+          label: "Get Started",
+          href: "/login",
         }}
       />
     </Container>

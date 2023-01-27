@@ -12,12 +12,12 @@ interface HeroProps {
   cta?: {
     label: string;
     href: string;
-  }
+  };
 }
 
 const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
   const navigate = useNavigate();
-  const handleOnClickCTA = () => navigate(cta?.href ?? '/');
+  const handleOnClickCTA = () => navigate(cta?.href ?? "/");
 
   return (
     <Container w="100%">
@@ -30,7 +30,7 @@ const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
             {description}
           </Description>
           <Button variant="solid" colorScheme="teal" onClick={handleOnClickCTA}>
-            {cta?.label ?? 'Button'}
+            {cta?.label ?? "Button"}
           </Button>
         </Box>
         <Box

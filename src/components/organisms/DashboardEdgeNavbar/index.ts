@@ -1,1 +1,1 @@
-export {default} from './DashboardEdgeNavbar';
+export { default } from "./DashboardEdgeNavbar";

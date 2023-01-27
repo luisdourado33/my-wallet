@@ -1,1 +1,1 @@
-export { default } from './BrandText';
+export { default } from "./BrandText";

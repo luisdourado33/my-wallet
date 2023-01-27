@@ -15,7 +15,7 @@ export const Container = styled(Flex)`
   height: 100%;
 
   ${ContentBox} {
-    padding-inline: ${({theme}) => theme.spacing.inline};
+    padding-inline: ${({ theme }) => theme.spacing.inline};
     padding-block: 20px;
   }
 
@@ -27,5 +27,5 @@ export const Container = styled(Flex)`
     ${ContentBox}:nth-child(2) {
       display: none;
     }
-  };
+  } ;
 `;

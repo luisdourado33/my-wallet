@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const callToActions: Array<PropsCTA> = [
     { label: "For companies", variant: "nav" },
-    { label: "Sign-in", variant: "solid", onClick: () => navigate('/login') },
+    { label: "Sign-in", variant: "solid", onClick: () => navigate("/login") },
     {
       label: colorMode == "dark" ? "🌚" : "🌞",
       variant: "outline",

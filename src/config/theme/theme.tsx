@@ -25,12 +25,12 @@ export const theme: ThemeConfig | any = {
     block: "15px",
   },
   breakpoints: {
-    laptop: '1024px',
-    tablet: '768px',
-    mobileL: '425px',
-    mobileM: '375px',
-    mobileS: '320px'
-  }
+    laptop: "1024px",
+    tablet: "768px",
+    mobileL: "425px",
+    mobileM: "375px",
+    mobileS: "320px",
+  },
 };
 
 const chakraTheme = extendTheme({

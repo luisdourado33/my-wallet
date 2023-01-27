@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Heading, Text } from '@chakra-ui/react';
+import { Heading, Text } from "@chakra-ui/react";
 
 interface Props {
   title: string;
@@ -10,14 +10,12 @@ interface Props {
 const HeadingWithDescription: React.FC<Props> = ({ title, description }) => {
   return (
     <div>
-      <Heading 
-        fontSize='lg'
-        fontWeight='extrabold'
-      >{title}</Heading>
-      <Text 
-        fontWeight='thin'
-        colorScheme='cyan'
-      >{description}</Text>
+      <Heading fontSize="lg" fontWeight="extrabold">
+        {title}
+      </Heading>
+      <Text fontWeight="thin" colorScheme="cyan">
+        {description}
+      </Text>
     </div>
   );
 };

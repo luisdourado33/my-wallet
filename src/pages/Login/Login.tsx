@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Container, ContentBox } from './login.styles';
-import { useColorMode, Button, Text } from '@chakra-ui/react';
+import { Container, ContentBox } from "./login.styles";
+import { useColorMode, Button, Text } from "@chakra-ui/react";
 
-import BrandText from 'components/atoms/BrandText';
-import LoginForm from 'components/organisms/LoginForm';
+import BrandText from "components/atoms/BrandText";
+import LoginForm from "components/organisms/LoginForm";
 
 const Login = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -12,23 +12,20 @@ const Login = () => {
   return (
     <Container>
       <ContentBox
-        w='50%'
-        display='flex'
-        flexDirection='column'
-        justifyContent='space-between'
+        w="50%"
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-between"
       >
         <BrandText />
         <LoginForm />
-        <Text fontSize='xx-small'>
-          © My Wallet - 2023
-        </Text>
+        <Text fontSize="xx-small">© My Wallet - 2023</Text>
       </ContentBox>
       <ContentBox
-        w='50%'
-        backgroundColor={colorMode == 'light' ? 'green.400' : 'green.500'}
+        w="50%"
+        backgroundColor={colorMode == "light" ? "green.400" : "green.500"}
         style={{
-          borderRadius: '20% 49% 10% 78% / 86% 65% 10% 32%',
-          
+          borderRadius: "20% 49% 10% 78% / 86% 65% 10% 32%",
         }}
       >
         {/* <Button onClick={toggleColorMode}>
