@@ -16,7 +16,7 @@ const ValuesInfoCard = () => {
       </CardHeader>
 
       <CardBody>
-        <Text>There's not updates about your balance.</Text>
+        <Text>There's no updates about your balance.</Text>
       </CardBody>
     </CardContainer>
   );

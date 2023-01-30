@@ -50,8 +50,8 @@ const DashboardSidebar = () => {
   ));
 
   useEffect(() => {
-    console.log(location);
-  });
+    console.log('Rendered')
+  }, []);
 
   return (
     <Sidebar paddingBlock="4" paddingInline="3" justifyContent="space-between">
@@ -61,7 +61,10 @@ const DashboardSidebar = () => {
           {renderItems}
         </Items>
       </VStack>
-      <Button variant="link" fontSize="2xs" onClick={toggleColorMode}>
+      <Button 
+        fontSize='xs'
+        onClick={toggleColorMode}
+      >
         Switch theme
       </Button>
     </Sidebar>
