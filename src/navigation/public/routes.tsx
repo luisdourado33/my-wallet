@@ -31,6 +31,7 @@ export const mappedRoutes = createRoutesFromElements(
       }
     >
       <Route path="" element={<DashboardHome />} />
+      <Route path="transactions" element={<DashboardHome />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </>
