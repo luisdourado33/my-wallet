@@ -8,8 +8,6 @@ const DashboardGridCard = () => {
   return (
     <Container marginBottom="4">
       <ValuesInfoCard />
-      <ValuesInfoCard />
-      <ValuesInfoCard />
     </Container>
   );
 };

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const PrivateRoute: React.FC<any> = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
 
-  const checkUserAuthentication = () => {
+  const checkUserAuthentication = (): void => {
     setIsAuth(true);
   };
 

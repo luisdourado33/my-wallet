@@ -46,7 +46,7 @@ const DashboardHome = () => {
           description="Lorem Ipsum"
         />
 
-        <TestChart />
+        {/* <TestChart /> */}
       </Content>
     </Container>
   );

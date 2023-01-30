@@ -5,7 +5,9 @@ import { CardContainer } from "./styles.modules";
 
 const ValuesInfoCard = () => {
   return (
-    <CardContainer>
+    <CardContainer
+      cursor='pointer'
+    >
       <CardHeader>
         <Heading size="sm" fontWeight="light">
           Balance
