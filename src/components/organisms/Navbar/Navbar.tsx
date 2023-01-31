@@ -42,7 +42,7 @@ const Navbar = () => {
   const renderCallToActions = callToActions.map((item, index) => (
     <Button
       key={index}
-      color="teal"
+      color="orange"
       variant={item.variant ?? "solid"}
       onClick={item.onClick ?? (() => {})}
       fontSize="sm"

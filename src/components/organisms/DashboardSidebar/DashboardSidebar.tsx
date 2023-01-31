@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import BrandText from "components/atoms/BrandText";
 
-import { EditIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 import { Button, useColorMode, VStack, Text } from "@chakra-ui/react";
 import { Items, Sidebar } from "./styles.modules";
@@ -43,7 +43,7 @@ const DashboardSidebar = () => {
       key={index}
       fontSize="sm"
       size="sm"
-      colorScheme="teal"
+      colorScheme="orange"
       justifyContent="start"
       variant={currentPageLabel() == item.label ? "solid" : "link"}
       onClick={() => navigate(item.destination)}
