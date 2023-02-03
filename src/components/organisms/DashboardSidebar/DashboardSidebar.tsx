@@ -11,11 +11,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 const ITEMS = [
   { label: "Dashboard", destination: '/dashboard', icon: <HamburgerIcon mr="2" /> },
   { label: "Transactions", destination: '/dashboard/transactions', icon: <HamburgerIcon mr="2" /> },
-  // { label: "Credit Cards", icon: <HamburgerIcon mr="2" /> },
-  // { label: "Planning", icon: <HamburgerIcon mr="2" /> },
-  // { label: "Accounts", icon: <HamburgerIcon mr="2" /> },
-  // { label: "Reports", icon: <HamburgerIcon mr="2" /> },
-  // { label: "More options", icon: <HamburgerIcon mr="2" /> },
+  { label: "Credit Cards", icon: <HamburgerIcon mr="2" /> },
+  { label: "Planning", icon: <HamburgerIcon mr="2" /> },
+  { label: "Accounts", icon: <HamburgerIcon mr="2" /> },
+  { label: "Reports", icon: <HamburgerIcon mr="2" /> },
+  { label: "More options", icon: <HamburgerIcon mr="2" /> },
   // { label: "Settings", icon: <EditIcon mr="2" /> },
 ];
 
@@ -43,10 +43,10 @@ const DashboardSidebar = () => {
       key={index}
       fontSize="sm"
       size="sm"
-      colorScheme="orange"
+      colorScheme="green"
       justifyContent="start"
       variant={currentPageLabel() == item.label ? "solid" : "link"}
-      onClick={() => navigate(item.destination)}
+      onClick={() => navigate(item.destination!)}
     >
       {item.icon}
       {item.label}

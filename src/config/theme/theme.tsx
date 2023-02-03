@@ -35,8 +35,8 @@ export const theme: ThemeConfig | any = {
 
 const chakraTheme = extendTheme({
   fonts: {
-    heading: `'Inter', sans-serif`,
-    body: `'Inter', sans-serif`,
+    // heading: `'Inter', sans-serif`,
+    // body: `'Inter', sans-serif`,
   },
 });
 

@@ -7,4 +7,5 @@ export const Container = styled(Flex)`
 
 export const Content = styled(Flex)`
     padding: 15px;
+}
 `;

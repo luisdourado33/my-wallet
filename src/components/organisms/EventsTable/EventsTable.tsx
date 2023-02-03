@@ -6,9 +6,7 @@ import EventsTableContent from 'components/templates/eventsTable/EventsTableCont
 
 const EventsTable = () => {
     return (
-        <Container
-            p='15px'
-        >
+        <Container p='15px'>
             <EventsTableContent />
         </Container>
     );

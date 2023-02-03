@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
-import { Container } from "./styles.modules";
+import { Tabs, TabList, Tab, TabPanels, TabPanel, ColorMode, Card, Heading, Text } from "@chakra-ui/react";
 
 const EventsTableContent = () => {
     return (
-        <Container>
+        <Card p='15px'>
             <Tabs 
                 variant='soft-rounded' 
                 colorScheme='green'
@@ -16,14 +15,13 @@ const EventsTableContent = () => {
                 </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <p>one!</p>
                     </TabPanel>
                     <TabPanel>
                         <p>two!</p>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
-        </Container>
+        </Card>
     );
 };
 

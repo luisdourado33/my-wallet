@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
           <Description fontSize="sm" mb="5">
             {description}
           </Description>
-          <Button variant="solid" colorScheme="orange" onClick={handleOnClickCTA}>
+          <Button variant="solid" colorScheme="green" onClick={handleOnClickCTA}>
             {cta?.label ?? "Button"}
           </Button>
         </Box>
@@ -39,7 +39,7 @@ const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          bgColor="orange"
+          bgColor="green"
         >
           <span>Image here</span>
           {/* <Image 
