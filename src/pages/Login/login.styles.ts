@@ -27,5 +27,5 @@ export const Container = styled(Flex)`
     ${ContentBox}:nth-child(2) {
       display: none;
     }
-  } ;
+  }
 `;

@@ -9,8 +9,16 @@ import { Items, Sidebar } from "./styles.modules";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const ITEMS = [
-  { label: "Dashboard", destination: '/dashboard', icon: <HamburgerIcon mr="2" /> },
-  { label: "Transactions", destination: '/dashboard/transactions', icon: <HamburgerIcon mr="2" /> },
+  {
+    label: "Dashboard",
+    destination: "/dashboard",
+    icon: <HamburgerIcon mr="2" />,
+  },
+  {
+    label: "Transactions",
+    destination: "/dashboard/transactions",
+    icon: <HamburgerIcon mr="2" />,
+  },
   { label: "Credit Cards", icon: <HamburgerIcon mr="2" /> },
   { label: "Planning", icon: <HamburgerIcon mr="2" /> },
   { label: "Accounts", icon: <HamburgerIcon mr="2" /> },
@@ -21,7 +29,7 @@ const ITEMS = [
 
 const DashboardSidebar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -31,7 +39,7 @@ const DashboardSidebar = () => {
     const locations: any = {
       "/dashboard": "Dashboard",
       "/settings": "Settings",
-      "/dashboard/transactions": "Transactions"
+      "/dashboard/transactions": "Transactions",
     };
 
     return locations[currentLocation];
@@ -54,26 +62,21 @@ const DashboardSidebar = () => {
   ));
 
   useEffect(() => {
-    console.log('Rendered')
+    console.log("Rendered");
   }, []);
 
   return (
     <Sidebar
       w="200px"
-      paddingBlock="4" 
-      paddingInline="3" 
+      paddingBlock="4"
+      paddingInline="3"
       justifyContent="space-between"
     >
       <VStack>
         <BrandText mb="8" />
-        <Items paddingInline="0">
-          {renderItems}
-        </Items>
+        <Items paddingInline="0">{renderItems}</Items>
       </VStack>
-      <Button 
-        fontSize='xs'
-        onClick={toggleColorMode}
-      >
+      <Button fontSize="xs" onClick={toggleColorMode}>
         Switch theme
       </Button>
     </Sidebar>

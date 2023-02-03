@@ -29,7 +29,11 @@ const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
           <Description fontSize="sm" mb="5">
             {description}
           </Description>
-          <Button variant="solid" colorScheme="green" onClick={handleOnClickCTA}>
+          <Button
+            variant="solid"
+            colorScheme="green"
+            onClick={handleOnClickCTA}
+          >
             {cta?.label ?? "Button"}
           </Button>
         </Box>
