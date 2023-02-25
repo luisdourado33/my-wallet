@@ -12,6 +12,7 @@ export const Container = styled(Flex)`
 export const Content = styled.div`
   margin-top: 30px;
   width: 100%;
+  height: 100vh;
   overflow: scroll;
 
   ::-webkit-scrollbar {

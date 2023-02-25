@@ -3,7 +3,6 @@ import React from "react";
 import { Container, Description, Title } from "./styles.modules";
 import { Box, Button, HStack, Image } from "@chakra-ui/react";
 
-import PersonalFinanceSVG from "../../../assets/personal-finance.svg";
 import { useNavigate } from "react-router-dom";
 
 interface HeroProps {
@@ -29,7 +28,11 @@ const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
           <Description fontSize="sm" mb="5">
             {description}
           </Description>
-          <Button variant="solid" colorScheme="orange" onClick={handleOnClickCTA}>
+          <Button
+            variant="solid"
+            colorScheme="green"
+            onClick={handleOnClickCTA}
+          >
             {cta?.label ?? "Button"}
           </Button>
         </Box>
@@ -39,7 +42,7 @@ const HeroSection: React.FC<HeroProps> = ({ title, description, cta }) => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          bgColor="orange"
+          bgColor="green"
         >
           <span>Image here</span>
           {/* <Image 

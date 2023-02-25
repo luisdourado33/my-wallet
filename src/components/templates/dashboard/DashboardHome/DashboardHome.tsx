@@ -15,7 +15,7 @@ const DashboardHome = () => {
     {
       label: "Search",
       icon: <SearchIcon fontSize="2xs" />,
-      color: "orange",
+      color: "green",
       variant: "outline",
       href: "/search",
       showLabel: false,
@@ -23,7 +23,7 @@ const DashboardHome = () => {
     {
       label: "Add new",
       icon: <AddIcon marginRight={2} fontSize="2xs" />,
-      color: "orange",
+      color: "green",
       href: "/add-new",
       showLabel: true,
     },
@@ -40,10 +40,10 @@ const DashboardHome = () => {
       </Flex>
       <Content>
         <DashboardGridCard />
-        {/* <HeadingWithDescription
+        <HeadingWithDescription
           title="Expenses by category"
           description="Lorem Ipsum"
-        /> */}
+        />
       </Content>
     </Container>
   );

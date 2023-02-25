@@ -5,14 +5,12 @@ import { CardContainer } from "./styles.modules";
 
 const ValuesInfoCard = () => {
   return (
-    <CardContainer
-      cursor='pointer'
-    >
+    <CardContainer cursor="pointer">
       <CardHeader>
         <Heading size="sm" fontWeight="light">
           Balance
         </Heading>
-        <Heading size="md">R$ 6.431,00</Heading>
+        <Heading size="md">R$ 2.000,00</Heading>
       </CardHeader>
 
       <CardBody>

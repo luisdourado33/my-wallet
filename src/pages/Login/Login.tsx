@@ -23,7 +23,7 @@ const Login = () => {
       </ContentBox>
       <ContentBox
         w="50%"
-        backgroundColor={colorMode == "light" ? "orange.400" : "orange.500"}
+        backgroundColor={colorMode == "light" ? "green.400" : "green.500"}
         style={{
           borderRadius: "20% 49% 10% 78% / 86% 65% 10% 32%",
         }}
