@@ -1,13 +1,15 @@
 import React, {useCallback, useState} from 'react';
 
 import {Box, Button} from '@chakra-ui/react';
-import {AddIcon} from "@chakra-ui/icons";
+import {AddIcon, Icon} from "@chakra-ui/icons";
 
 import styled from "styled-components";
+import {FaMinus, FaPlus} from "react-icons/fa";
 
 const Container = styled(Box)``;
 const CollapseContent = styled(Box)`
   z-index: 3;
+  left: 10px;
 `;
 
 const AddNewButton = () => {
@@ -16,6 +18,32 @@ const AddNewButton = () => {
 	const handleCollapse = useCallback(() => {
 		setIsCollapsed(current => !current)
 	}, [isCollapsed]);
+
+	const collapseOptions = [
+		{
+			label: 'Expense',
+			icon: FaMinus,
+			onClick: () => {
+			},
+			color: '',
+			props: {}
+		},
+		{
+			label: 'Income',
+			icon: FaPlus,
+			onClick: () => {
+			},
+			color: '',
+			props: {}
+		},
+	];
+
+	const renderCollapseOptions = collapseOptions?.map((option, index) => (
+		<Button key={index} backgroundColor={option.color ?? 'green.400'} w='100%' mb={1} size='sm'
+		        leftIcon={<Icon as={option.icon} {...option.props} />}>
+			{option.label}
+		</Button>
+	));
 
 	return (
 		<Container position='relative'>
@@ -32,13 +60,11 @@ const AddNewButton = () => {
 			{isCollapsed && (
 				<CollapseContent
 					position='absolute'
-					p='15'
 					mt='2'
 					borderRadius='5'
-					colorScheme='whatsapp'
-					backgroundColor='green.100'
+					colorScheme='whatsapp.100'
 				>
-					<h1>Collapse is open</h1>
+					{renderCollapseOptions}
 				</CollapseContent>
 			)}
 		</Container>
