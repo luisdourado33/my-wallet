@@ -9,6 +9,7 @@ import { AddIcon, SearchIcon } from "@chakra-ui/icons";
 import HeadingWithDescription from "components/molecules/HeadingWithDescription";
 import DashboardEdgeNavbar from "components/organisms/DashboardEdgeNavbar";
 import DashboardGridCard from "components/organisms/DashboardGridCard/DashboardGridCard";
+import AddNewButton from "../../../molecules/AddNewButton";
 
 const DashboardHome = () => {
   const menuItems: EdgeNavbarType[] = [
@@ -26,6 +27,8 @@ const DashboardHome = () => {
       color: "green",
       href: "/add-new",
       showLabel: true,
+      hasOwnComponent: true,
+      ownComponent: <AddNewButton />
     },
   ];
 
