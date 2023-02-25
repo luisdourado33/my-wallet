@@ -3,7 +3,6 @@ import React from "react";
 import { Container, Description, Title } from "./styles.modules";
 import { Box, Button, HStack, Image } from "@chakra-ui/react";
 
-import PersonalFinanceSVG from "../../../assets/personal-finance.svg";
 import { useNavigate } from "react-router-dom";
 
 interface HeroProps {

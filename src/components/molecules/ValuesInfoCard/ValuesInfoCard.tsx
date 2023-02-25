@@ -10,7 +10,7 @@ const ValuesInfoCard = () => {
         <Heading size="sm" fontWeight="light">
           Balance
         </Heading>
-        <Heading size="md">R$ 6.431,00</Heading>
+        <Heading size="md">R$ 2.000,00</Heading>
       </CardHeader>
 
       <CardBody>

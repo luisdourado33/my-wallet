@@ -40,10 +40,10 @@ const DashboardHome = () => {
       </Flex>
       <Content>
         <DashboardGridCard />
-        {/* <HeadingWithDescription
+        <HeadingWithDescription
           title="Expenses by category"
           description="Lorem Ipsum"
-        /> */}
+        />
       </Content>
     </Container>
   );
