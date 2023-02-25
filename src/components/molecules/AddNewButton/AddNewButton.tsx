@@ -24,6 +24,7 @@ const AddNewButton = () => {
 			label: 'Expense',
 			icon: FaMinus,
 			onClick: () => {
+				console.log('Expense add')
 			},
 			color: '',
 			props: {}
@@ -40,7 +41,9 @@ const AddNewButton = () => {
 
 	const renderCollapseOptions = collapseOptions?.map((option, index) => (
 		<Button key={index} backgroundColor={option.color ?? 'green.400'} w='100%' mb={1} size='sm'
-		        leftIcon={<Icon as={option.icon} {...option.props} />}>
+		        leftIcon={<Icon as={option.icon} {...option.props} />}
+		onClick={option.onClick}
+		>
 			{option.label}
 		</Button>
 	));
