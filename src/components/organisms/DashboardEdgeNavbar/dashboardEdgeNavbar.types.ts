@@ -5,4 +5,8 @@ export type EdgeNavbarType = {
   icon?: any;
   color?: string;
   variant?: string;
+
+  hasOwnComponent?: boolean;
+
+  ownComponent?: JSX.Element;
 };

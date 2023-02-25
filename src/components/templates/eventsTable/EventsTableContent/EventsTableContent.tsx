@@ -31,7 +31,7 @@ const EventsTableContent = () => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <p>A expense list here</p>
+            <p>An expense list here</p>
           </TabPanel>
           <TabPanel>
             <p>An income list here</p>
