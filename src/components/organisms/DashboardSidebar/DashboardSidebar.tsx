@@ -73,7 +73,7 @@ const DashboardSidebar = () => {
       justifyContent="space-between"
     >
       <VStack>
-        <BrandText mb="8" />
+        <BrandText />
         <Items paddingInline="0">{renderItems}</Items>
       </VStack>
       <Button fontSize="xs" onClick={toggleColorMode}>

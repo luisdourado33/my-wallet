@@ -10,6 +10,7 @@ import HeadingWithDescription from "components/molecules/HeadingWithDescription"
 import DashboardEdgeNavbar from "components/organisms/DashboardEdgeNavbar";
 import DashboardGridCard from "components/organisms/DashboardGridCard/DashboardGridCard";
 import AddNewButton from "../../../molecules/AddNewButton";
+import ListByCategory from "../../../organisms/ListByCategory";
 
 const DashboardHome = () => {
   const menuItems: EdgeNavbarType[] = [
@@ -28,7 +29,7 @@ const DashboardHome = () => {
       href: "/add-new",
       showLabel: true,
       hasOwnComponent: true,
-      ownComponent: <AddNewButton />
+      ownComponent: <AddNewButton />,
     },
   ];
 
@@ -47,6 +48,7 @@ const DashboardHome = () => {
           title="Expenses by category"
           description="Lorem Ipsum"
         />
+        <ListByCategory />
       </Content>
     </Container>
   );
