@@ -4,7 +4,7 @@
  * do not use it on pages which has some user-fetched data
  */
 
-import {configureStore} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 import authenticationReducer from "./authenticationSlice";
 import authenticatedUserReducer from "./authenticatedUserSlice";
@@ -12,7 +12,7 @@ import authenticatedUserReducer from "./authenticatedUserSlice";
 export const publicStore = configureStore({
   reducer: {
     authentication: authenticationReducer,
-    authenticatedUser: authenticatedUserReducer
+    authenticatedUser: authenticatedUserReducer,
   },
 });
 

@@ -1,12 +1,12 @@
 import React from "react";
 
-import {useAppSelector} from "../../../../hooks/context";
+import { useAppSelector } from "../../../../hooks/context";
 
-import {Flex} from "@chakra-ui/react";
-import {Container, Content} from "./styles.modules";
+import { Flex } from "@chakra-ui/react";
+import { Container, Content } from "./styles.modules";
 
-import {EdgeNavbarType} from "components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types";
-import {AddIcon, SearchIcon} from "@chakra-ui/icons";
+import { EdgeNavbarType } from "components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types";
+import { AddIcon, SearchIcon } from "@chakra-ui/icons";
 
 import HeadingWithDescription from "components/molecules/HeadingWithDescription";
 import DashboardEdgeNavbar from "components/organisms/DashboardEdgeNavbar";
@@ -15,12 +15,14 @@ import AddNewButton from "../../../molecules/AddNewButton";
 import ListByCategory from "../../../organisms/ListByCategory";
 
 const DashboardHome = () => {
-  const authenticatedUser = useAppSelector((state) => state.authenticatedUser.user);
+  const authenticatedUser = useAppSelector(
+    (state) => state.authenticatedUser.user
+  );
 
   const menuItems: EdgeNavbarType[] = [
     {
       label: "Search",
-      icon: <SearchIcon fontSize="2xs"/>,
+      icon: <SearchIcon fontSize="2xs" />,
       color: "green",
       variant: "outline",
       href: "/search",
@@ -44,7 +46,7 @@ const DashboardHome = () => {
           title="Dashboard"
           description={`Welcome, ${authenticatedUser?.firstName}`}
         />
-        <DashboardEdgeNavbar items={menuItems}/>
+        <DashboardEdgeNavbar items={menuItems} />
       </Flex>
       <Content>
         <DashboardGridCard
@@ -55,7 +57,7 @@ const DashboardHome = () => {
           title="Expenses by category"
           description="Lorem Ipsum"
         />
-        <ListByCategory/>
+        <ListByCategory />
       </Content>
     </Container>
   );
