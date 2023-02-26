@@ -1,12 +1,12 @@
 import React from "react";
 
-import {useAppSelector} from "../../../../hooks/context";
+import { useAppSelector } from "../../../../hooks/context";
 
-import {Flex} from "@chakra-ui/react";
-import {Container, Content} from "./styles.modules";
+import { Flex } from "@chakra-ui/react";
+import { Container, Content } from "./styles.modules";
 
-import {EdgeNavbarType} from "components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types";
-import {AddIcon, SearchIcon} from "@chakra-ui/icons";
+import { EdgeNavbarType } from "components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types";
+import { AddIcon, SearchIcon } from "@chakra-ui/icons";
 
 import HeadingWithDescription from "components/molecules/HeadingWithDescription";
 import DashboardEdgeNavbar from "components/organisms/DashboardEdgeNavbar";
@@ -57,7 +57,7 @@ const DashboardHome = () => {
           title="Recent activities"
           description="List of recent expenses and incomes"
         />
-        <ListByCategory walletRecords={authenticatedUser?.walletRecords}/>
+        <ListByCategory walletRecords={authenticatedUser?.walletRecords} />
       </Content>
     </Container>
   );

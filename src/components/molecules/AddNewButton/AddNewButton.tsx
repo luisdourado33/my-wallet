@@ -1,14 +1,14 @@
-import React, {useCallback, useState} from "react";
+import React, { useCallback, useState } from "react";
 
-import {Box, Button} from "@chakra-ui/react";
-import {ChevronDownIcon, ChevronUpIcon, Icon} from "@chakra-ui/icons";
+import { Box, Button } from "@chakra-ui/react";
+import { ChevronDownIcon, ChevronUpIcon, Icon } from "@chakra-ui/icons";
 
 import styled from "styled-components";
-import {FaMinus, FaPlus} from "react-icons/fa";
-import {useAppDispatch} from "../../../hooks/context";
-import {addNewRecord} from "../../../context/public/authenticatedUserSlice";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import { useAppDispatch } from "../../../hooks/context";
+import { addNewRecord } from "../../../context/public/authenticatedUserSlice";
 
-import {RecordType} from "../../../lib/types/wallet-record.types";
+import { RecordType } from "../../../lib/types/wallet-record.types";
 
 const Container = styled(Box)``;
 const CollapseContent = styled(Box)`
@@ -29,14 +29,16 @@ const AddNewButton = () => {
       label: "Expense",
       icon: FaMinus,
       onClick: () => {
-        dispatch(addNewRecord({
-          place: "Shopping Pantanal",
-          description: "TV 55' Samsung",
-          dateOfOccurrence: new Date(Date.now()),
-          category: "Clothes and Dresses",
-          value: 2400.00,
-          type: RecordType.EXPENSE,
-        },))
+        dispatch(
+          addNewRecord({
+            place: "Shopping Pantanal",
+            description: "TV 55' Samsung",
+            dateOfOccurrence: new Date(Date.now()),
+            category: "Clothes and Dresses",
+            value: 2400.0,
+            type: RecordType.EXPENSE,
+          })
+        );
       },
       color: "",
       props: {},
@@ -45,14 +47,16 @@ const AddNewButton = () => {
       label: "Income",
       icon: FaPlus,
       onClick: () => {
-        dispatch(addNewRecord({
-          place: "Nubank",
-          description: "Pix recebido",
-          dateOfOccurrence: new Date(Date.now()),
-          category: "Clothes and Dresses",
-          value: 1000.00,
-          type: RecordType.INCOME,
-        },))
+        dispatch(
+          addNewRecord({
+            place: "Nubank",
+            description: "Pix recebido",
+            dateOfOccurrence: new Date(Date.now()),
+            category: "Clothes and Dresses",
+            value: 1000.0,
+            type: RecordType.INCOME,
+          })
+        );
       },
       color: "",
       props: {},

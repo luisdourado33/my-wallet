@@ -1,7 +1,7 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import {RootState} from "./publicStore";
-import {RecordType, WalletRecord} from "../../lib/types/wallet-record.types";
+import { RootState } from "./publicStore";
+import { RecordType, WalletRecord } from "../../lib/types/wallet-record.types";
 
 enum AccessLevelEnum {
   MEMBER = 0,
