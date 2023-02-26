@@ -16,7 +16,7 @@ the system, the following screenshots shows what has been done so far:
 
 #### First dashboard
 
-![Simple dashboard](./public/img/dashboard_1.png)
+<kbd><img src="./public/img/dashboard_1.png" /></kbd>
 
 ### Project structure
 
