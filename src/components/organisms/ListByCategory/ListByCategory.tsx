@@ -3,7 +3,10 @@ import React from "react";
 import ListByCategoryItem from "../../molecules/ListByCategoryItem";
 
 import { List } from "./styles.modules";
-import { RecordType, WalletRecord } from "../../../types/wallet-record.types";
+import {
+  RecordType,
+  WalletRecord,
+} from "../../../lib/types/wallet-record.types";
 
 const ListByCategory = () => {
   const walletRecordsMock: WalletRecord[] = [
@@ -31,7 +34,7 @@ const ListByCategory = () => {
       value: 500.0,
       type: RecordType.INCOME,
     },
-        {
+    {
       place: "Paytrack",
       description: "Reembolso cadeira",
       dateOfOccurrence: new Date(Date.now()),
@@ -39,7 +42,7 @@ const ListByCategory = () => {
       value: 500.0,
       type: RecordType.INCOME,
     },
-        {
+    {
       place: "Paytrack",
       description: "Reembolso cadeira",
       dateOfOccurrence: new Date(Date.now()),
@@ -47,7 +50,7 @@ const ListByCategory = () => {
       value: 500.0,
       type: RecordType.INCOME,
     },
-        {
+    {
       place: "Paytrack",
       description: "Reembolso cadeira",
       dateOfOccurrence: new Date(Date.now()),
@@ -55,7 +58,7 @@ const ListByCategory = () => {
       value: 500.0,
       type: RecordType.INCOME,
     },
-        {
+    {
       place: "Paytrack",
       description: "Reembolso cadeira",
       dateOfOccurrence: new Date(Date.now()),
@@ -63,7 +66,7 @@ const ListByCategory = () => {
       value: 500.0,
       type: RecordType.INCOME,
     },
-        {
+    {
       place: "Paytrack",
       description: "Reembolso cadeira",
       dateOfOccurrence: new Date(Date.now()),
@@ -71,7 +74,7 @@ const ListByCategory = () => {
       value: 500.0,
       type: RecordType.INCOME,
     },
-        {
+    {
       place: "Paytrack",
       description: "Reembolso cadeira",
       dateOfOccurrence: new Date(Date.now()),

@@ -9,6 +9,15 @@
   - [x] Save a landing page as example, on Figma;
   - [x] Choose a color palette on Colorhunt and save a screenshot on Figma.
 
+### What is already done?
+
+Although there are several things that I need to implement and improve in
+the system, the following screenshots shows what has been done so far:
+
+#### First dashboard
+
+![Simple dashboard](./public/img/dashboard_1.png)
+
 ### Project structure
 
   - [x] Start project repository on Github, using CRA;

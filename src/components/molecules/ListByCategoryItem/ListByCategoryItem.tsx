@@ -10,31 +10,19 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { RecordType, WalletRecord } from "../../../types/wallet-record.types";
+import {
+  RecordType,
+  WalletRecord,
+} from "../../../lib/types/wallet-record.types";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { getOccurenceDate } from "../../../utils/dates/handle-date";
+import { getWalletRecordIcon } from "utils/wallet-item/get-item-info";
 
 interface Props {
   walletRecord: WalletRecord;
 }
 
 const ListByCategoryItem: React.FC<Props> = (props: Props) => {
-  function getWalletRecordIcon(type: RecordType) {
-    const types = {
-      [RecordType.EXPENSE]: FaMinus,
-      [RecordType.INCOME]: FaPlus,
-    };
-
-    return types[type];
-  }
-
-  function getOccurenceDate(date: Date) {
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear().toString();
-
-    return `${day}/${month}/${year}`;
-  }
-
   return (
     <Item
       display={"flex"}
@@ -79,7 +67,7 @@ const ListByCategoryItem: React.FC<Props> = (props: Props) => {
         </Text>
       </Box>
 
-      <Box w="100px" display={'flex'} justifyContent={'flex-end'}>
+      <Box w="100px" display={"flex"} justifyContent={"flex-end"}>
         <Text
           color={
             props.walletRecord.type === RecordType.INCOME ? "green" : "red"
