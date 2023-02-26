@@ -79,7 +79,7 @@ const ListByCategoryItem: React.FC<Props> = (props: Props) => {
         </Text>
       </Box>
 
-      <Box w="100px">
+      <Box w="100px" display={'flex'} justifyContent={'flex-end'}>
         <Text
           color={
             props.walletRecord.type === RecordType.INCOME ? "green" : "red"
