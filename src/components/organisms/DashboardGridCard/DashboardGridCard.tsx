@@ -12,7 +12,10 @@ interface Props {
 const DashboardGridCard = (financialData: Props) => {
   return (
     <Container marginBottom="4">
-      <ValuesInfoCard salary={financialData.salary} />
+      <ValuesInfoCard
+        salary={financialData.salary}
+        walletRecords={financialData.walletRecords}
+      />
     </Container>
   );
 };

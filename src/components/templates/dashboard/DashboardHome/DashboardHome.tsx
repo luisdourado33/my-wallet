@@ -50,14 +50,14 @@ const DashboardHome = () => {
       </Flex>
       <Content>
         <DashboardGridCard
-          salary={authenticatedUser.salary}
-          walletRecords={authenticatedUser.walletRecords}
+          salary={authenticatedUser?.salary}
+          walletRecords={authenticatedUser?.walletRecords}
         />
         <HeadingWithDescription
-          title="Expenses by category"
-          description="Lorem Ipsum"
+          title="Recent activities"
+          description="List of recent expenses and incomes"
         />
-        <ListByCategory />
+        <ListByCategory walletRecords={authenticatedUser?.walletRecords} />
       </Content>
     </Container>
   );
