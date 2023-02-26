@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import BrandText from "components/atoms/BrandText";
 
-import { HamburgerIcon } from "@chakra-ui/icons";
+import {HamburgerIcon} from "@chakra-ui/icons";
 
-import { Button, useColorMode, VStack, Text } from "@chakra-ui/react";
-import { Items, Sidebar } from "./styles.modules";
-import { useLocation, useNavigate } from "react-router-dom";
+import {Button, useColorMode, VStack} from "@chakra-ui/react";
+import {Items, Sidebar} from "./styles.modules";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const ITEMS = [
   {
     label: "Dashboard",
     destination: "/dashboard",
-    icon: <HamburgerIcon mr="2" />,
+    icon: <HamburgerIcon mr="2"/>,
   },
   {
     label: "Transactions",
@@ -60,10 +60,6 @@ const DashboardSidebar = () => {
       {item.label}
     </Button>
   ));
-
-  useEffect(() => {
-    console.log("Rendered");
-  }, []);
 
   return (
     <Sidebar
