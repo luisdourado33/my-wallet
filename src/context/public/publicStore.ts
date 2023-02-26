@@ -7,10 +7,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import authenticationReducer from "./authenticationSlice";
+import authenticatedUserReducer from "./authenticatedUserSlice";
 
 export const publicStore = configureStore({
   reducer: {
     authentication: authenticationReducer,
+    authenticatedUser: authenticatedUserReducer,
   },
 });
 

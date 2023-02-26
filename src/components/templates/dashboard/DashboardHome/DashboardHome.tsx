@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useAppSelector } from "../../../../hooks/context";
+
 import { Flex } from "@chakra-ui/react";
 import { Container, Content } from "./styles.modules";
 
@@ -13,6 +15,10 @@ import AddNewButton from "../../../molecules/AddNewButton";
 import ListByCategory from "../../../organisms/ListByCategory";
 
 const DashboardHome = () => {
+  const authenticatedUser = useAppSelector(
+    (state) => state.authenticatedUser.user
+  );
+
   const menuItems: EdgeNavbarType[] = [
     {
       label: "Search",
@@ -38,12 +44,15 @@ const DashboardHome = () => {
       <Flex w="100%" justifyContent="space-between">
         <HeadingWithDescription
           title="Dashboard"
-          description="Welcome, John!"
+          description={`Welcome, ${authenticatedUser?.firstName}`}
         />
         <DashboardEdgeNavbar items={menuItems} />
       </Flex>
       <Content>
-        <DashboardGridCard />
+        <DashboardGridCard
+          salary={authenticatedUser.salary}
+          walletRecords={authenticatedUser.walletRecords}
+        />
         <HeadingWithDescription
           title="Expenses by category"
           description="Lorem Ipsum"

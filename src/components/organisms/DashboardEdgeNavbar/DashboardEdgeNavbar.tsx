@@ -10,21 +10,19 @@ interface Props {
 
 const DashboardEdgeNavbar: React.FC<Props> = ({ items }) => {
   const renderItems = items.map((item, index) => {
+    if (item.hasOwnComponent) {
+      return <div key={index}>{item.ownComponent}</div>;
+    }
+
     return (
-      <>
-        {item.hasOwnComponent ? (
-          <>{item.ownComponent}</>
-        ) : (
-          <Button
-            key={index}
-            colorScheme={item.color}
-            variant={item.variant ?? "solid"}
-          >
-            {item.icon ?? ""}
-            {item.showLabel ? item.label : ""}
-          </Button>
-        )}
-      </>
+      <Button
+        key={index}
+        colorScheme={item.color}
+        variant={item.variant ?? "solid"}
+      >
+        {item.icon ?? ""}
+        {item.showLabel ? item.label : ""}
+      </Button>
     );
   });
 
