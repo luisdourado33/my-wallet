@@ -1,10 +1,12 @@
 import React from "react";
 
-import { Flex } from "@chakra-ui/react";
-import { Container, Content } from "./styles.modules";
+import {useAppSelector} from "../../../../hooks/context";
 
-import { EdgeNavbarType } from "components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types";
-import { AddIcon, SearchIcon } from "@chakra-ui/icons";
+import {Flex} from "@chakra-ui/react";
+import {Container, Content} from "./styles.modules";
+
+import {EdgeNavbarType} from "components/organisms/DashboardEdgeNavbar/dashboardEdgeNavbar.types";
+import {AddIcon, SearchIcon} from "@chakra-ui/icons";
 
 import HeadingWithDescription from "components/molecules/HeadingWithDescription";
 import DashboardEdgeNavbar from "components/organisms/DashboardEdgeNavbar";
@@ -13,10 +15,12 @@ import AddNewButton from "../../../molecules/AddNewButton";
 import ListByCategory from "../../../organisms/ListByCategory";
 
 const DashboardHome = () => {
+  const authenticatedUser = useAppSelector((state) => state.authenticatedUser.user);
+
   const menuItems: EdgeNavbarType[] = [
     {
       label: "Search",
-      icon: <SearchIcon fontSize="2xs" />,
+      icon: <SearchIcon fontSize="2xs"/>,
       color: "green",
       variant: "outline",
       href: "/search",
@@ -38,17 +42,20 @@ const DashboardHome = () => {
       <Flex w="100%" justifyContent="space-between">
         <HeadingWithDescription
           title="Dashboard"
-          description="Welcome, John!"
+          description={`Welcome, ${authenticatedUser?.firstName}`}
         />
-        <DashboardEdgeNavbar items={menuItems} />
+        <DashboardEdgeNavbar items={menuItems}/>
       </Flex>
       <Content>
-        <DashboardGridCard />
+        <DashboardGridCard
+          salary={authenticatedUser.salary}
+          walletRecords={authenticatedUser.walletRecords}
+        />
         <HeadingWithDescription
           title="Expenses by category"
           description="Lorem Ipsum"
         />
-        <ListByCategory />
+        <ListByCategory/>
       </Content>
     </Container>
   );
