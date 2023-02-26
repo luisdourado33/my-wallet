@@ -8,7 +8,7 @@ import EventsTable from "components/organisms/EventsTable";
 
 const Dashboard = () => {
   return (
-    <Container w="100%" h="100%">
+    <Container w="100%" h="100%" p={"15px"}>
       <DashboardSidebar />
       <Content id="content" w="100%" paddingBlock="15" paddingInline="7">
         <Outlet />

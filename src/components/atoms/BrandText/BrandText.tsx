@@ -1,23 +1,34 @@
 import React from "react";
 
-import { Heading } from "@chakra-ui/react";
+import { Box, Heading, Icon } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+
+import { FaWallet } from "react-icons/fa";
 
 const BrandText = (props: any) => {
   const navigate = useNavigate();
 
   return (
-    <Heading
-      as="button"
-      w="fit-content"
-      size="md"
-      letterSpacing="lowest"
-      cursor="pointer"
-      onClick={() => navigate("/")}
-      {...props}
+    <Box
+      display={"flex"}
+      w={"100%"}
+      alignItems={"center"}
+      justifyContent={"start"}
+      mb={5}
     >
-      My Wallet
-    </Heading>
+      <Icon as={FaWallet} />
+      <Heading
+        as="h1"
+        ml={2}
+        size="sm"
+        letterSpacing="lowest"
+        cursor="pointer"
+        onClick={() => navigate("/")}
+        {...props}
+      >
+        My Wallet
+      </Heading>
+    </Box>
   );
 };
 
