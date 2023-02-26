@@ -1,6 +1,7 @@
-import { WalletRecord } from "../../lib/types/wallet-record.types";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./publicStore";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+
+import {RootState} from "./publicStore";
+import {RecordType, WalletRecord} from "../../lib/types/wallet-record.types";
 
 enum AccessLevelEnum {
   MEMBER = 0,
@@ -32,7 +33,7 @@ const initialState = {
     firstName: "John",
     lastName: "Doe",
     walletRecords: [],
-    salary: 1302.0,
+    salary: 4999.0,
     accessLevel: AccessLevelEnum.MEMBER,
     status: UserStatusEnum.ACTIVE,
   },
